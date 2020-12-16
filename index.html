@@ -53,7 +53,7 @@
                 <section>
                     <div class="section order-now">
                         <h1>Эффективные решения<br>для вашего бизнеса</h1>
-                        <a class="order-now-button" href="mailto:info@devstudio.com">Заказать услугу</a>
+                        <button class="order-now-button" type="button" data-modal-open>Заказать услугу</button>
                     </div>
                 </section>
                 <!-- Карточки с приемуществами -->
@@ -106,9 +106,18 @@
                     <div class="container section what-we-do">
                         <h2>Чем мы занимаемся</h2>
                         <ul class="what-we-do-list">
-                            <li class="item"><img src="images/box1.jpg" alt="Кодим" width="370" height="294"></li>
-                            <li class="item"><img src="images/box2.jpg" alt="Тестим" width="370" height="294"></li>
-                            <li class="item"><img src="images/box3.jpg" alt="Поддерживаем" width="370" height="294"></li>
+                            <li class="item">
+                                <img src="images/box1.jpg" alt="Кодим" width="370" height="294">
+                                <p>Десктопные приложения</p>
+                            </li>
+                            <li class="item">
+                                <img src="images/box2.jpg" alt="Тестим" width="370" height="294">
+                                <p>Мобильные приложения</p>
+                            </li>
+                            <li class="item">
+                                <img src="images/box3.jpg" alt="Поддерживаем" width="370" height="294">
+                                <p>Дизайнерские решения</p>
+                            </li>
                         </ul>
                     </div>
                 </section>
@@ -340,6 +349,19 @@
                 </div>
             </div>
         </footer>
-    
+        
+        <!-- Модальное окно -->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button class="modal-closed" data-modal-close>
+                    <svg class="close-icon" width="18" height="18">
+                        <use href="./images/icons/sprite-close.svg#close"></use>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        
+    <script src="./js/modal.js"></script>
 </body>
 </html>
