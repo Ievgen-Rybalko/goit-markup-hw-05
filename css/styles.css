@@ -153,10 +153,12 @@ body {
   /* margin-bottom: 3px; */
 
   color: var(--text-headder-dark-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .top-contacts a {
   color: var(--text-common-light-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-main.list .is-current,
@@ -167,7 +169,7 @@ body {
 .top-contacts a:active,
 .top-contacts a:focus {
   color: var(--basic-blue-color);
-  transition: 250ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-main li {
@@ -455,6 +457,7 @@ button.order-now-button {
   height: 44px;
   border-radius: 50%;
   fill: var(--sotials-inactive-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sotial-cards > .ellipse:not(:last-child) {
@@ -465,7 +468,7 @@ button.order-now-button {
 .list .ellipse:focus {
   fill: var(--text-white-color);
   background-color: var(--basic-blue-color);
-  transition: 250ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .section .our-clients {
@@ -489,13 +492,14 @@ button.order-now-button {
   box-sizing: border-box;
   border-radius: 4px;
   fill: var(--sotials-inactive-color);
+  transition: 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients .card-link:hover,
 .our-clients .card-link:focus {
   fill: var(--basic-blue-color);
   border: 1px solid var(--basic-blue-color);
-  transition: 1250ms;
+  transition: 250ms;
 }
 
 .our-clients.list .icon {
@@ -597,9 +601,11 @@ button.order-now-button {
   line-height: 1.62;
   letter-spacing: 0.03em;
   border: 0px;
+  border-radius: 4px;
 
   background: var(--background-medium-color);
- 
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
   /* text-align: center; */
 }
 
@@ -616,7 +622,7 @@ button.order-now-button {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   /* opacity: 1; */
-  transition: 250ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-cards {
@@ -625,7 +631,6 @@ button.order-now-button {
   flex-wrap: wrap;
   /* padding-top: 34px; */
 }
-
 
 /* Всплівающее окно */
 .portfolio-cards .img-item > p {
@@ -654,9 +659,10 @@ button.order-now-button {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-cards .item:hover .img-item > p {
+.portfolio-cards .item:hover .img-item > p,
+.portfolio-cards .item:focus .img-item > p {
   transform: translateY(0);
-  transition: 250ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 2;
 }
 
@@ -668,7 +674,7 @@ button.order-now-button {
 .portfolio-cards .item:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: 250ms;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-cards .img-item {
@@ -755,6 +761,14 @@ button.order-now-button {
   fill: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: 150ms;
+}
+
+.modal-closed .close-icon:hover {
+  fill: var(--basic-blue-color);
+  background-color: rgba(255, 1, 1, 0.068);
+  transform: rotate(-90deg);
+  transition: 150ms;
 }
 
 .backdrop.is-hidden {
