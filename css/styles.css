@@ -54,7 +54,7 @@ body {
   margin: 0px;
   margin-left: auto;
   margin-right: auto;
-  max-width: 1600px;
+  
   color: var(--text-common-light-color);
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
@@ -153,12 +153,12 @@ body {
   /* margin-bottom: 3px; */
 
   color: var(--text-headder-dark-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .top-contacts a {
   color: var(--text-common-light-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-main.list .is-current,
@@ -169,7 +169,6 @@ body {
 .top-contacts a:active,
 .top-contacts a:focus {
   color: var(--basic-blue-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-main li {
@@ -211,6 +210,9 @@ body {
 }
 
 .section.order-now {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1600px;
   padding-top: 0px;
   padding-bottom: 200px;
   padding-left: 0px;
@@ -218,7 +220,7 @@ body {
 }
 
 .order-now {
-  /* background: var(--background-dark-color); */
+  background: var(--background-dark-color);
 
   /* background: linear-gradient(#e66465 30%, #9198e5 90%); */
   background: linear-gradient(
@@ -287,7 +289,6 @@ button.order-now-button {
   display: block;
   width: 70px;
   height: 70px;
-  fill: var(--sotials-inactive-color);
 }
 
 .our-advantages-cards,
@@ -436,10 +437,9 @@ button.order-now-button {
 
 .ellipse .icon {
   display: block;
-
   width: 20px;
   height: 20px;
-  fill: inherit;
+  fill: var(--sotials-inactive-color);
 }
 
 .sotial-cards {
@@ -456,19 +456,23 @@ button.order-now-button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  fill: var(--sotials-inactive-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.sotial-cards > .ellipse:not(:last-child) {
+.sotial-cards .list-item:not(:last-child) {
   margin-right: 10px;
 }
 
 .list .ellipse:hover,
 .list .ellipse:focus {
-  fill: var(--text-white-color);
   background-color: var(--basic-blue-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.list .ellipse:hover .icon,
+.list .ellipse:focus .icon {
+  fill: var(--text-white-color);
 }
 
 .section .our-clients {
@@ -492,14 +496,16 @@ button.order-now-button {
   box-sizing: border-box;
   border-radius: 4px;
   fill: var(--sotials-inactive-color);
-  transition: 1250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 1250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 1250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients .card-link:hover,
 .our-clients .card-link:focus {
   fill: var(--basic-blue-color);
   border: 1px solid var(--basic-blue-color);
-  transition: 250ms;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-clients.list .icon {
@@ -563,7 +569,7 @@ button.order-now-button {
   color: var(--text-white-color);
 }
 
-.ellipse.footer {
+.footer .ellipse {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -622,7 +628,6 @@ button.order-now-button {
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
   /* opacity: 1; */
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-cards {
@@ -641,7 +646,6 @@ button.order-now-button {
   width: 370px;
   height: 294px;
   padding: 63px 24px;
-  z-index: 0;
 
   content: 'Технокряк это современная площадка распространения коронавируса. Компании используют эту платформу для цифрового шпионажа и атак на защищённые сервера конкурентов.';
   font-family: Roboto;
@@ -662,8 +666,6 @@ button.order-now-button {
 .portfolio-cards .item:hover .img-item > p,
 .portfolio-cards .item:focus .img-item > p {
   transform: translateY(0);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  z-index: 2;
 }
 
 .portfolio-cards img {
@@ -747,6 +749,7 @@ button.order-now-button {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-closed .close-icon {
@@ -768,7 +771,6 @@ button.order-now-button {
   fill: var(--basic-blue-color);
   background-color: rgba(255, 1, 1, 0.068);
   transform: rotate(-90deg);
-  transition: 150ms;
 }
 
 .backdrop.is-hidden {
