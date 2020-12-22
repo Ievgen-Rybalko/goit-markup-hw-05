@@ -54,7 +54,7 @@ body {
   margin: 0px;
   margin-left: auto;
   margin-right: auto;
-  
+
   color: var(--text-common-light-color);
   font-size: 14px;
   font-family: 'Roboto', sans-serif;
@@ -439,7 +439,8 @@ button.order-now-button {
   display: block;
   width: 20px;
   height: 20px;
-  fill: var(--sotials-inactive-color);
+
+  fill: inherit;
 }
 
 .sotial-cards {
@@ -456,9 +457,10 @@ button.order-now-button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
+  fill: var(--sotials-inactive-color);
 
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sotial-cards .list-item:not(:last-child) {
@@ -468,10 +470,6 @@ button.order-now-button {
 .list .ellipse:hover,
 .list .ellipse:focus {
   background-color: var(--basic-blue-color);
-}
-
-.list .ellipse:hover .icon,
-.list .ellipse:focus .icon {
   fill: var(--text-white-color);
 }
 
@@ -571,6 +569,16 @@ button.order-now-button {
 
 .footer .ellipse {
   background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--text-white-color);
+}
+
+.sotial-cards .list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.footer .ellipse:hover,
+.footer .ellipse:focus {
+  background-color: var(--basic-blue-color);
 }
 
 /* ================ПОРТФОЛИО============ */
